@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Commercers_Inventorymanagement_Starter",
+    "type": "magento-module",
+    "license": "commercers-UG-terms-/-license",
+    "homepage": "",
+    "description": "See all transaction for each SKU directly in your shop backend. The extension lists all sales and cancelations",
+    "authors": [
+    {
+        "name": "Commercers",
+        "email": "info@commercers.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

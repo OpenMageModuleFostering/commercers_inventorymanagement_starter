@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * commercers.com
+ * Commercers
+ */
+-->
+<config>
+  <modules>
+    <Commercers_Commercers>
+      <version>0.1.2</version>
+    </Commercers_Commercers>
+  </modules>
+  <global>
+    <helpers>
+      <commercers_commercers>
+        <class>Commercers_Commercers_Helper</class>
+      </commercers_commercers>
+    </helpers>
+  </global>
+  <adminhtml>
+    <translate>
+      <modules>
+        <commercers_commercers>
+          <files>
+            <default>Commercers_Commercers.csv</default>
+          </files>
+        </commercers_commercers>
+      </modules>
+    </translate>
+
+    <menu>
+      <catalog>
+        <children>
+          <commercers translate="title" module="commercers_commercers">
+            <title>Commercers</title>
+          </commercers>
+        </children>
+      </catalog>
+    </menu>
+    
+    <acl>
+      <resources>
+        <admin>
+          <children>
+              <catalog>
+                  <children>
+                    <commercers translate="title" module="commercers_commercers">
+                    <title>Commercers</title>
+                    </commercers>
+                </children>
+              </catalog>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
+</config>

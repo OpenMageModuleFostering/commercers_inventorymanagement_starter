@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * commercers.com
+ * Commercers Inventory management
+ */
+-->
+<config>
+  <modules>
+    <Commercers_Inventorymanagement>
+      <version>0.1.0</version>
+    </Commercers_Inventorymanagement>
+  </modules>
+
+  <global>
+    <blocks>
+        <inventorymanagement>
+            <class>Commercers_Inventorymanagement_Block</class>
+        </inventorymanagement>
+        <adminhtml>
+            <rewrite>
+                <catalog_product_edit_tabs>Commercers_Inventorymanagement_Block_Adminhtml_Catalog_Product_Tabs</catalog_product_edit_tabs>
+            </rewrite>
+        </adminhtml>
+    </blocks>
+    <models>
+      <inventorymanagement>
+        <class>Commercers_Inventorymanagement_Model</class>
+        <resourceModel>inventorymanagement_mysql4</resourceModel>
+      </inventorymanagement>
+      <inventorymanagement_mysql4>
+         <class>Commercers_Inventorymanagement_Model_Mysql4</class>
+         <entities>
+             <transactions><table>commercers_inventorymanagement_transactions</table></transactions>
+             <inventorymanagement><table>commercers_inventorymanagement</table></inventorymanagement>
+         </entities>
+      </inventorymanagement_mysql4>
+    </models>
+    <resources>
+        <inventorymanagement_setup>
+            <setup>
+                <module>Commercers_Inventorymanagement</module>
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </inventorymanagement_setup>
+        <inventorymanagement_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </inventorymanagement_write>
+        <inventorymanagement_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </inventorymanagement_read>
+    </resources>
+    <helpers>
+      <inventorymanagement>
+        <class>Commercers_Inventorymanagement_Helper</class>
+      </inventorymanagement>
+    </helpers>
+  </global>
+
+  <admin>
+    <routers>
+        <inventorymanagement>
+            <use>admin</use>
+            <args>
+                <module>Commercers_Inventorymanagement</module>
+                <frontName>inventorymanagement</frontName>
+            </args>
+        </inventorymanagement>
+        <adminhtml>
+            <args>
+               <modules>
+                  <Commercers_Inventorymanagement_Adminhtml before="Mage_Adminhtml">Commercers_Inventorymanagement_Adminhtml</Commercers_Inventorymanagement_Adminhtml>
+               </modules>
+            </args>
+         </adminhtml>
+    </routers>
+  </admin>
+  
+  <adminhtml>
+    <translate>
+      <modules>
+        <inventorymanagement>
+          <files>
+            <default>Commercers_Inventorymanagement.csv</default>
+          </files>
+        </inventorymanagement>
+      </modules>
+    </translate>
+
+    <menu>
+      <catalog>
+        <children>
+          <commercers>
+            <children>
+                <inventorymanagement translate="title" module="commercers_commercers">
+                    <sort_order>15</sort_order>
+                    <title>Inventory management</title>
+                    <children>
+                        <configuration translate="title" module="inventorymanagement">
+                            <sort_order>2</sort_order>
+                            <title>Configuration</title>
+                            <action>adminhtml/system_config/edit/section/inventorymanagement</action>
+                        </configuration>
+                        <inventorymanagement translate="title" module="inventorymanagement">
+                            <sort_order>1</sort_order>
+                            <title>Update Log</title>
+                            <action>inventorymanagement/adminhtml_inventorymanagement</action>
+                        </inventorymanagement>
+                    </children>
+                </inventorymanagement>
+            </children>
+          </commercers>
+        </children>
+      </catalog>
+    </menu>
+    
+     <acl>
+      <resources>
+        <admin>
+          <children>
+              <catalog>
+                  <children>
+                    <commercers>
+                      <children>
+                        <inventorymanagement translate="title" module="inventorymanagement">
+                          <title>Commercers Inventory management</title>
+                          <children>
+                            <configuration translate="title" module="inventorymanagement">
+                                <title>Configuration</title>
+                            </configuration>
+                            <inventorymanagement translate="title" module="inventorymanagement">
+                                <title>Update Log</title>
+                            </inventorymanagement>
+                          </children>
+                        </inventorymanagement>
+                      </children>
+                    </commercers>
+                </children>
+             </catalog>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+    
+    <layout>
+        <updates>
+            <inventorymanagement>
+                <file>inventorymanagement.xml</file>
+            </inventorymanagement>
+        </updates>
+    </layout>
+  </adminhtml>
+    <crontab>
+        <jobs>
+            <commercers_inventorymanagement>
+                <run>
+                   <model>inventorymanagement/cron::collectTransactions</model>
+                </run>
+            </commercers_inventorymanagement>
+        </jobs>
+    </crontab>
+</config>

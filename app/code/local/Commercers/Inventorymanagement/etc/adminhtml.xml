@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * commercers.com
+ * Commercers Inventory management
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <inventorymanagement title="title" module="inventorymanagement"> 
+                                        <title>Commercers Inventory management</title>
+                                    </inventorymanagement>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

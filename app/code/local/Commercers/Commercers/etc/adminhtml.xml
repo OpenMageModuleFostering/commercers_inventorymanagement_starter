@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * commercers.com
+ * Commercers
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <commercers title="title" module="commercers_commercers">
+                                        <title>Commercers</title>
+                                    </commercers>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- 
+    commercers.com
+    Commercers Inventory management
+-->
+<layout version="0.1.0">
+    <inventorymanagement_adminhtml_inventorymanagement_index>
+        <reference name="content">
+            <block type="inventorymanagement/adminhtml_inventorymanagement" name="inventorymanagement" />
+        </reference>
+    </inventorymanagement_adminhtml_inventorymanagement_index>
+    <adminhtml_catalog_product_transactions>
+       <block type="core/text_list" name="root">
+            <block type="inventorymanagement/adminhtml_catalog_product_tabs_transactions" name="inventorymanagement.catalog.product.tabs.transactions" />
+       </block>
+    </adminhtml_catalog_product_transactions>
+    <adminhtml_catalog_product_transactionsgrid>
+       <block type="core/text_list" name="root">
+            <block type="inventorymanagement/adminhtml_catalog_product_tabs_transactions" name="inventorymanagement.catalog.product.tabs.transactions" />
+       </block>
+    </adminhtml_catalog_product_transactionsgrid>
+</layout>

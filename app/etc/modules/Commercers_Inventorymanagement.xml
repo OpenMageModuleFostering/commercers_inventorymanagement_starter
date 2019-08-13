@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/** 
+ *  commercers.com
+ *  Commercers Inventory management
+ */
+ -->
+<config>
+    <modules>
+        <Commercers_Inventorymanagement>
+            <codePool>local</codePool>
+            <active>true</active>
+            <depends>
+                <Commercers_Commercers/>
+            </depends>
+        </Commercers_Inventorymanagement>
+    </modules>
+</config>

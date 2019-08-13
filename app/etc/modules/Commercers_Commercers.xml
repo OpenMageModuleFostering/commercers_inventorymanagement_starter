@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * commercers.com
+ * Commercers 
+ */
+ -->
+<config>
+    <modules>
+        <Commercers_Commercers>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Commercers_Commercers>
+    </modules>
+</config>

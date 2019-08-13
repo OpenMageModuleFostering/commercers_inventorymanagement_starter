@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * commercers.com
+ * Commercers Inventory management
+ */
+-->
+<config>
+    <sections>
+        <inventorymanagement translate="label" module="inventorymanagement">
+            <label>Inventory management</label>
+            <tab>commercers</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store> 
+            <groups>
+                <inventorymanagement translate="label">
+                    <label>Inventory management cronjob</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <minute translate="label comment">
+                            <label>Minutes</label>
+                            <comment><![CDATA[<span class='notice'>'x'</span> minutes after every full hour<br><span class='notice'>'*/x'</span> every x minutes<br><span class='notice'>'*'</span> every minute<br><span class='notice'>'x,y'</span> after x and after y minutes after every full hour<br><span class='notice'>'x-y'</span> every minute between x and y after every full hour]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>inventorymanagement/adminhtml_system_config_backend_commercers_inventorymanagement</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </minute>
+                        <hour translate="label comment">
+                            <label>Hour</label>
+                            <comment><![CDATA[<span class='notice'>'x'</span> hour of the day<br><span class='notice'>'*/x'</span> every x hours<br><span class='notice'>'*'</span> every hour<br><span class='notice'>'x,y'</span> x-th and y-th hour of the day<br><span class='notice'>'x-y'</span> every hour between x and y of the day]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>inventorymanagement/adminhtml_system_config_backend_commercers_inventorymanagement</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </hour>
+                        <day translate="label comment">
+                            <label>Day</label>
+                            <comment><![CDATA[<span class='notice'>'x'</span> day of the month<br><span class='notice'>'*/x'</span> every x days<br><span class='notice'>'*'</span> every day<br><span class='notice'>'x,y'</span> x-th and y-th day of the month<br><span class='notice'>'x-y'</span> every day between x and y of the month]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>inventorymanagement/adminhtml_system_config_backend_commercers_inventorymanagement</backend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </day>
+                        <month translate="label comment">
+                            <label>Month</label>
+                            <comment><![CDATA[<span class='notice'>'*'</span> every month<br>further opions analog to days]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>inventorymanagement/adminhtml_system_config_backend_commercers_inventorymanagement</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </month>
+                        <dayofweek translate="label comment">
+                            <label>Day of the week</label>
+                            <comment><![CDATA[<span class='notice'>0 and 7</span> equals sunday<br><span class='notice'>1</span> equals monday, <span class='notice'>2</span> equals tuesday, ...<br>further options analog to days]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>inventorymanagement/adminhtml_system_config_backend_commercers_inventorymanagement</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </dayofweek>
+                        <error_email translate="label">
+                            <label>Error Email Recipient</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_email>
+                        <error_email_identity translate="label">
+                            <label>Error Email Sender</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_identity</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_email_identity>
+                        <error_email_template translate="label">
+                            <label>Error Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_email_template>
+                    </fields>
+                </inventorymanagement>
+            </groups>
+        </inventorymanagement>
+    </sections>
+</config>
